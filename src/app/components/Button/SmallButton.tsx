@@ -1,20 +1,20 @@
 import styled from 'styled-components';
 
 const RoundBox = styled.button`
-  width: 36px;
-  min-width: 32px;
-  height: 36px;
-  display: flex;
+  width: 36px !important;
+  min-width: 32px !important;
+  height: 36px !important;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  padding: 3px;
+  padding: 3px !important;
   border: none;
   outline: 0;
   border-radius: 5px;
   cursor: pointer;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.07);
+    background: rgba(0, 0, 0, 0.07) !important;
   }
 
   & svg {
