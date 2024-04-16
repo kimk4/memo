@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import MemoItem from '../item';
 
 const List = styled.div`
   width: 300px;
@@ -8,5 +9,26 @@ const List = styled.div`
 `;
 
 export default function MemoList() {
-  return <List></List>;
+  return (
+    <List>
+      <MemoItem
+        id="1"
+        preview={'나는 메모입니다.'}
+        created_at={new Date().toString()}
+        selected={true}
+      />
+      <MemoItem
+        id="1"
+        preview={'나는 메모입니다.'}
+        created_at={new Date().toString()}
+        selected={false}
+      />
+      <MemoItem
+        id="1"
+        preview={'나는 메모입니다.'}
+        created_at={new Date().toString()}
+        selected={false}
+      />
+    </List>
+  );
 }

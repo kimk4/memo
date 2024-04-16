@@ -6,8 +6,10 @@ import { ReactComponent as PostDeleteIcon } from './assets/delete_black_24dp.svg
 import { ReactComponent as PostAddIcon } from './assets/post_add_black_24dp.svg';
 import { ReactComponent as MakeBoldIcon } from './assets/format_bold_black_24dp.svg';
 import { ReactComponent as MakeSizeIcon } from './assets/text_fields_black_24dp.svg';
-import { ReactComponent as MakeTodo } from './assets/check_circle_black_24dp.svg';
+import { ReactComponent as MakeTodoIcon } from './assets/check_circle_black_24dp.svg';
 import { ReactComponent as MakeImageIcon } from './assets/collections_black_24dp.svg';
+import Block from 'app/components/Block';
+import SearchInput from 'app/components/Input/SearchInput';
 
 const Box = styled.div`
   width: 100%;
@@ -35,6 +37,10 @@ const LeftMenu = styled(Menu)`
   background-color: #fff;
   border-right: 1px solid #e9e9e9;
   padding: 0 10px;
+
+  @media (max-width: 687px) {
+    margin-left: -200px;
+  }
 `;
 
 const RightMenu = styled(Menu)`
@@ -51,7 +57,21 @@ export default function MemoToolBar() {
         <TitleText style={{ marginLeft: '5px' }}>Memo</TitleText>
         <SmallButton onClick={() => {}} Icon={() => <PostDeleteIcon />} />
       </LeftMenu>
-      <RightMenu></RightMenu>
+      <RightMenu>
+        <SmallButton onClick={() => {}} Icon={() => <PostAddIcon />} />
+        <div>
+          <SmallButton onClick={() => {}} Icon={() => <MakeSizeIcon />} />
+          <Block marginRight="5px" />
+          <SmallButton onClick={() => {}} Icon={() => <MakeBoldIcon />} />
+          <Block marginRight="5px" />
+          <SmallButton onClick={() => {}} Icon={() => <MakeTodoIcon />} />
+        </div>
+        <div>
+          <SmallButton onClick={() => {}} Icon={() => <MakeImageIcon />} />
+          <Block marginRight="5px" />
+          <SearchInput />
+        </div>
+      </RightMenu>
     </Box>
   );
 }
